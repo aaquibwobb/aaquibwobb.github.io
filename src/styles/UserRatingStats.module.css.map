@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "UserRatingStats.module.scss"
+    ],
+    "names": [],
+    "file": "UserRatingStats.module.css"
+}

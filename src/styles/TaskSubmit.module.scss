@@ -1,0 +1,42 @@
+@import "./variables.scss";
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.header {
+    width: 100%;
+    border-bottom: 1px solid $colorGrayV1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.textCopyPaste {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    @extend .section;
+}
+
+.sectionUpload {
+    @extend .section;
+}
+
+.labelUpload {
+    color: $colorPrimary;
+}

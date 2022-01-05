@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "wobb",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/Users/prashantchoudhary/code/wobb-rn/amplify/backend/api/wobb/schema.graphql",
+    "defaultAuthType": {
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authwobb"
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "API_KEY",
+        "expirationTime": 7,
+        "apiKeyExpirationDate": "2021-12-17T21:57:06.031Z",
+        "keyDescription": "unauth"
+      }
+    ],
+    "conflictResolution": {}
+  }
+}

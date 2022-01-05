@@ -1,0 +1,115 @@
+{
+    "function": {
+        "wobbPostConfirmation": {
+            "build": true,
+            "providerPlugin": "awscloudformation",
+            "service": "Lambda"
+        },
+        "wobbPreSignUp": {
+            "build": true,
+            "providerPlugin": "awscloudformation",
+            "service": "Lambda"
+        },
+        "wobbOauthLinking": {
+            "build": true,
+            "providerPlugin": "awscloudformation",
+            "service": "Lambda"
+        },
+        "wobbCreateCampaignTrigger": {
+            "build": true,
+            "providerPlugin": "awscloudformation",
+            "service": "Lambda"
+        }
+    },
+    "auth": {
+        "wobb": {
+            "service": "Cognito",
+            "providerPlugin": "awscloudformation",
+            "dependsOn": [
+                {
+                    "category": "function",
+                    "resourceName": "wobbPostConfirmation",
+                    "triggerProvider": "Cognito",
+                    "attributes": [
+                        "Arn",
+                        "Name"
+                    ]
+                }
+            ],
+            "customAuth": false,
+            "frontendAuthConfig": {
+                "socialProviders": [
+                    "FACEBOOK",
+                    "GOOGLE"
+                ],
+                "usernameAttributes": [
+                    "EMAIL",
+                    "PHONE_NUMBER"
+                ],
+                "signupAttributes": [
+                    "EMAIL",
+                    "NAME"
+                ],
+                "passwordProtectionSettings": {
+                    "passwordPolicyMinLength": 8,
+                    "passwordPolicyCharacters": []
+                },
+                "mfaConfiguration": "OFF",
+                "mfaTypes": [
+                    "SMS"
+                ],
+                "verificationMechanisms": [
+                    "EMAIL"
+                ]
+            }
+        }
+    },
+    "api": {
+        "wobb": {
+            "service": "AppSync",
+            "providerPlugin": "awscloudformation",
+            "output": {
+                "authConfig": {
+                    "defaultAuthentication": {
+                        "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+                        "userPoolConfig": {
+                            "userPoolId": "authwobb"
+                        }
+                    },
+                    "additionalAuthenticationProviders": [
+                        {
+                            "authenticationType": "API_KEY",
+                            "apiKeyConfig": {
+                                "apiKeyExpirationDays": 7,
+                                "apiKeyExpirationDate": "2021-12-17T21:57:06.031Z",
+                                "description": "unauth"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "analytics": {
+        "wobb": {
+            "service": "Pinpoint",
+            "providerPlugin": "awscloudformation"
+        }
+    },
+    "notifications": {
+        "wobb": {
+            "service": "Pinpoint",
+            "channels": [
+                "APNS",
+                "FCM"
+            ]
+        }
+    },
+    "storage": {
+        "wobb": {
+            "service": "S3",
+            "providerPlugin": "awscloudformation",
+            "dependsOn": []
+        }
+    }
+}

@@ -1,0 +1,212 @@
+// @ts-check
+import { initSchema } from '@aws-amplify/datastore';
+import { schema } from './schema';
+
+const CampaignStatus = {
+  "DRAFT": "DRAFT",
+  "SUBMITTED": "SUBMITTED",
+  "PUBLISHED": "PUBLISHED",
+  "ONGOING": "ONGOING",
+  "COMPLETED": "COMPLETED"
+};
+
+const PayoutType = {
+  "BARTER": "BARTER",
+  "VARIABLE": "VARIABLE",
+  "FIXED": "FIXED",
+  "CPA": "CPA"
+};
+
+const Platform = {
+  "YOUTUBE": "YOUTUBE",
+  "INSTAGRAM": "INSTAGRAM"
+};
+
+const Gender = {
+  "MALE": "MALE",
+  "FEMALE": "FEMALE",
+  "OTHERS": "OTHERS"
+};
+
+const JobStatus = {
+  "SHORT_LISTED": "SHORT_LISTED",
+  "HIRED": "HIRED",
+  "ONGOING": "ONGOING",
+  "COMPLETED": "COMPLETED",
+  "REJECTED": "REJECTED"
+};
+
+const PromotionGoals = {
+  "PRODUCT_REVIEW": "PRODUCT_REVIEW",
+  "PRODUCT_LAUNCH": "PRODUCT_LAUNCH",
+  "BRAND_AWARENESS": "BRAND_AWARENESS",
+  "APP_REVIEW": "APP_REVIEW",
+  "PRODUCT_UNBOXING": "PRODUCT_UNBOXING"
+};
+
+const DeliverableTypeYoutube = {
+  "DEDICATED_VIDEO": "DEDICATED_VIDEO",
+  "INTEGRATED_VIDEO": "INTEGRATED_VIDEO",
+  "SHORT": "SHORT"
+};
+
+const DeliverableTypeInsta = {
+  "REEL": "REEL",
+  "SWIPE_UP_STORY": "SWIPE_UP_STORY",
+  "IGTV": "IGTV",
+  "STATIC_POST": "STATIC_POST",
+  "VIDEO_POST": "VIDEO_POST",
+  "CONTENT_ONLY": "CONTENT_ONLY"
+};
+
+const Category = {
+  "LIFESTYLE_VLOGGING": "LIFESTYLE_VLOGGING",
+  "PODCAST": "PODCAST",
+  "PRANKS": "PRANKS",
+  "BEAUTY": "BEAUTY",
+  "SKINCARE": "SKINCARE",
+  "HAIRCARE": "HAIRCARE",
+  "MAKEUP_COSMETICS": "MAKEUP_COSMETICS",
+  "FOOD": "FOOD",
+  "HEALTHY_FOOD": "HEALTHY_FOOD",
+  "BUDGET_FOOD": "BUDGET_FOOD",
+  "RESTAURANT_CAFE": "RESTAURANT_CAFE",
+  "CHEF": "CHEF",
+  "COOKING": "COOKING",
+  "BAKING": "BAKING",
+  "FINANCE": "FINANCE",
+  "CRYPTO": "CRYPTO",
+  "STOCKS": "STOCKS",
+  "INVESTMENTS": "INVESTMENTS",
+  "FINANCIAL_EDUCATION": "FINANCIAL_EDUCATION",
+  "FINANCIAL_WELLNESS": "FINANCIAL_WELLNESS",
+  "TECH_GADGET": "TECH_GADGET",
+  "COMEDY": "COMEDY",
+  "HUMOUR_FUNNY": "HUMOUR_FUNNY",
+  "STANDUP_COMEDIANS": "STANDUP_COMEDIANS",
+  "SKETCH_COMEDY": "SKETCH_COMEDY",
+  "SPORTS_GAMING": "SPORTS_GAMING",
+  "VIDEO_GAMING": "VIDEO_GAMING",
+  "BETTING": "BETTING",
+  "OUTDOOR": "OUTDOOR",
+  "SPORTS": "SPORTS",
+  "EDUCATION": "EDUCATION",
+  "GRADUATION_EXAMS": "GRADUATION_EXAMS",
+  "ENGINEERING": "ENGINEERING",
+  "NON_ENGINEERING": "NON_ENGINEERING",
+  "POST_GRADUATE_EXAMS": "POST_GRADUATE_EXAMS",
+  "CAT": "CAT",
+  "GATE": "GATE",
+  "GOVT_EXAMS": "GOVT_EXAMS",
+  "UPSC": "UPSC",
+  "BANKING": "BANKING",
+  "FASHION": "FASHION",
+  "MODELING": "MODELING",
+  "BUDGET_FASHION": "BUDGET_FASHION",
+  "LUXURY_GOODS": "LUXURY_GOODS",
+  "PLUS_SIZE": "PLUS_SIZE",
+  "TRAVEL": "TRAVEL",
+  "DOMESTIC": "DOMESTIC",
+  "INTERNATIONAL": "INTERNATIONAL",
+  "BIKER": "BIKER",
+  "BUSINESS": "BUSINESS",
+  "CAREERS": "CAREERS",
+  "MOTIVATION": "MOTIVATION",
+  "HEALTH_WELLNESS": "HEALTH_WELLNESS",
+  "DOCTORS": "DOCTORS",
+  "DIETITIANS": "DIETITIANS",
+  "YOGA": "YOGA",
+  "FITNESS": "FITNESS",
+  "HEALTHY_LIFESTYLE": "HEALTHY_LIFESTYLE",
+  "GYMMING": "GYMMING",
+  "WEIGHT_LIFTING": "WEIGHT_LIFTING",
+  "WEIGHT_LOSS": "WEIGHT_LOSS",
+  "ATHLETES": "ATHLETES",
+  "TOY": "TOY",
+  "CHILDREN": "CHILDREN",
+  "BABY": "BABY",
+  "WEDDING": "WEDDING",
+  "PET": "PET",
+  "DOG": "DOG",
+  "OTHERS": "OTHERS",
+  "DECOR": "DECOR",
+  "HOME_DECOR": "HOME_DECOR",
+  "GARDEN_DECOR": "GARDEN_DECOR",
+  "INTERIOR": "INTERIOR",
+  "DESIGNERS": "DESIGNERS",
+  "ARCHITECTS": "ARCHITECTS",
+  "REAL_ESTATE": "REAL_ESTATE",
+  "RELATIONSHIPS": "RELATIONSHIPS",
+  "SCHOOL_STUDENTS": "SCHOOL_STUDENTS",
+  "COLLEGE_STUDENTS": "COLLEGE_STUDENTS",
+  "MOMMYS": "MOMMYS",
+  "FATHERS": "FATHERS",
+  "DATING": "DATING",
+  "MARRIED_COUPLE": "MARRIED_COUPLE",
+  "AUTO": "AUTO",
+  "CARS_BIKES": "CARS_BIKES",
+  "COMMUNITIES": "COMMUNITIES",
+  "LGBT": "LGBT",
+  "ENTERTAINMENT": "ENTERTAINMENT",
+  "PHOTOGRAPHY": "PHOTOGRAPHY",
+  "TELEVISION_FILM": "TELEVISION_FILM",
+  "SONGS": "SONGS",
+  "MUSIC": "MUSIC",
+  "ART_SKETCHING": "ART_SKETCHING",
+  "POETRY": "POETRY",
+  "NEWS": "NEWS",
+  "MEME": "MEME"
+};
+
+const UserRole = {
+  "INFLUENCER": "INFLUENCER",
+  "TALENT_AGENCY": "TALENT_AGENCY",
+  "BRAND": "BRAND",
+  "MARKETING_AGENCY": "MARKETING_AGENCY",
+  "FREELANCE_MARKETER": "FREELANCE_MARKETER"
+};
+
+const PushNotificationService = {
+  "APNS": "APNS",
+  "FCM": "FCM",
+  "BAIDU": "BAIDU",
+  "ADM": "ADM"
+};
+
+const TaskStatus = {
+  "TOBECOMPLETED": "TOBECOMPLETED",
+  "COMPLETED": "COMPLETED",
+  "ONGOING": "ONGOING"
+};
+
+const { Campaign, Brand, User, ChatRoom, Message, Task, ChatRoomAdmins, PayoutElement, FolloweRange, DeliveryMilestone, Deliverables, DeliverableType, PushNotificationDeviceToken, CampaignSubmission, QuizElement } = initSchema(schema);
+
+export {
+  Campaign,
+  Brand,
+  User,
+  ChatRoom,
+  Message,
+  Task,
+  ChatRoomAdmins,
+  CampaignStatus,
+  PayoutType,
+  Platform,
+  Gender,
+  JobStatus,
+  PromotionGoals,
+  DeliverableTypeYoutube,
+  DeliverableTypeInsta,
+  Category,
+  UserRole,
+  PushNotificationService,
+  TaskStatus,
+  PayoutElement,
+  FolloweRange,
+  DeliveryMilestone,
+  Deliverables,
+  DeliverableType,
+  PushNotificationDeviceToken,
+  CampaignSubmission,
+  QuizElement
+};

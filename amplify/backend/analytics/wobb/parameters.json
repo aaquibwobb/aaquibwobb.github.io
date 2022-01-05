@@ -1,0 +1,19 @@
+{
+  "appName": "wobb",
+  "appId": "1befe9030e224962b40d43905e1222ff",
+  "roleName": "pinpointLambdaRole1ddd992a",
+  "cloudformationPolicyName": "cloudformationPolicy1ddd992a",
+  "cloudWatchPolicyName": "cloudWatchPolicy1ddd992a",
+  "pinpointPolicyName": "pinpointPolicy1ddd992a",
+  "authPolicyName": "pinpoint_amplify_1ddd992a",
+  "unauthPolicyName": "pinpoint_amplify_1ddd992a",
+  "authRoleName": {
+    "Ref": "AuthRoleName"
+  },
+  "unauthRoleName": {
+    "Ref": "UnauthRoleName"
+  },
+  "authRoleArn": {
+    "Fn::GetAtt": ["AuthRole", "Arn"]
+  }
+}

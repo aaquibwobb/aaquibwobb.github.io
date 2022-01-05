@@ -1,0 +1,75 @@
+.page {
+  margin: 24px 100px;
+  margin-bottom: 0;
+  height: calc(100vh - 24px - var(--header-height));
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25% auto;
+      grid-template-columns: 25% auto;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 768px) {
+  .page {
+    overflow: scroll;
+  }
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--color-gray-v1);
+}
+
+.searchbar {
+  background: var(--color-primary-surface);
+  padding: 8px 4px;
+  width: 100%;
+}
+
+.threadlist {
+  background: white;
+  min-height: 100%;
+  width: 100%;
+  border-right: 1px solid var(--color-gray-v1);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 56px 46px auto;
+      grid-template-rows: 56px 46px auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .threadlist .body {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    max-height: 100vh;
+  }
+}
+
+.threadcontent {
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+}
+
+@media only screen and (min-width: 768px) {
+  .threadcontent {
+    visibility: visible;
+  }
+}
+/*# sourceMappingURL=ThreadsView.module.css.map */

@@ -1,0 +1,96 @@
+.singleLineInput {
+  margin: 8px 0px;
+}
+
+.singleLineInput .label {
+  font-weight: 500;
+  font-size: var(--font-size-heading);
+  margin: 8px 0px;
+  display: block;
+}
+
+.singleLineInput .inputRow {
+  border: 1px solid var(--color-gray-v1);
+  padding: 0px 8px;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+
+.singleLineInput .inputRow .input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--color-primary-dark);
+  font-size: var(--font-size-body-text);
+}
+
+.singleLineInput .hintAndErrors * {
+  font-size: var(--font-size-any-small);
+  color: var(--color-gray-v2);
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
+}
+
+.singleLineInput .hintAndErrors .error {
+  color: var(--color-error);
+}
+
+.singleLineInput:focus-within .inputRow {
+  border: 1px solid var(--color-primary-dark);
+}
+
+.otp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.otp .otpCase {
+  border: 1px solid var(--color-gray-v1);
+  margin: 0px 3px;
+  width: 36px !important;
+  height: 36px;
+  text-align: center;
+  border-radius: 2px;
+  outline: none;
+}
+
+.otp .otpCase:hover, .otp .otpCase:focus {
+  border-color: var(--color-primary);
+}
+/*# sourceMappingURL=form.module.css.map */

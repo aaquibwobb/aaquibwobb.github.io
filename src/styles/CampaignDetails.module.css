@@ -1,0 +1,399 @@
+.page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  --padding-x: 32px;
+}
+
+.section,
+.header,
+.postedBy,
+.aboutBrand,
+.aboutCampaign,
+.deliverables,
+.whoCanApply,
+.openings {
+  width: 100%;
+  padding: 16px var(--padding-x);
+}
+
+.header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-gray-v1);
+  position: relative;
+  --badge-width: 72px;
+  padding-right: calc(10px + var(--badge-width));
+}
+
+label {
+  font-size: 4.2vw;
+  font-weight: 500;
+  /* text-transform: uppercase; */
+}
+
+@media only screen and (min-width: 768px) {
+  label {
+    font-size: 2.5vw;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  label {
+    font-size: 1.2vw;
+  }
+}
+
+.campaign {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.campaign .img {
+  width: 46px;
+  height: 46px;
+}
+
+.campaign .text {
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.campaign .title {
+  font-weight: 500;
+}
+
+.campaign .link {
+  font-weight: 500;
+  font-size: var(--font-size-any-small);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.data .head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.data .key {
+  color: var(--color-gray-v2);
+  text-transform: uppercase;
+}
+
+.data .value {
+  font-weight: 500;
+}
+
+.badge {
+  padding: 4px 16px;
+  width: var(--badge-width);
+  background: var(--color-success);
+  color: var(--color-gray-v1);
+  top: 10px;
+  right: 0px;
+  position: absolute;
+  font-size: var(--font-size-any-small);
+  border-top-left-radius: 32px;
+  border-bottom-left-radius: 32px;
+}
+
+.postedBy {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  border-bottom: 1px solid var(--color-gray-v1);
+}
+
+.postedBy .title {
+  color: var(--color-gray-v2);
+  margin-bottom: 4px;
+}
+
+.postedBy .body {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.postedBy .author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.postedBy .author .avatar {
+  margin-right: 4px;
+}
+
+.postedBy .author .name {
+  font-weight: 500;
+}
+
+.postedBy .author .date {
+  font-weight: 200;
+  color: var(--color-gray-v2);
+}
+
+.hiringRate .title {
+  margin-bottom: 4px;
+  font-size: var(--font-size-any-small);
+}
+
+.aboutBrand .title,
+.aboutCampaign .title {
+  margin-bottom: 8px;
+}
+
+.deliverables {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.deliverables .title {
+  margin-bottom: 8px;
+}
+
+.deliverables .body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.deliverables .deliverable {
+  background: var(--color-primary-surface);
+  padding: 8px;
+  min-width: 96px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 1.5px;
+}
+
+.deliverables .deliverable .count {
+  background: white;
+  text-align: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  margin: 4px 4px;
+}
+
+.whoCanApply .title,
+.openings .title {
+  margin-bottom: 8px;
+}
+
+.whoCanApply .body,
+.openings .body {
+  padding: 8px 12px;
+}
+
+.whoCanApply .criteria,
+.openings .criteria {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin: 4px 0px;
+}
+
+.whoCanApply .criteria .text,
+.openings .criteria .text {
+  margin-left: 8px;
+}
+
+.whoCanApply .tags,
+.openings .tags {
+  padding: 8px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.whoCanApply .tags .tag,
+.openings .tags .tag {
+  margin: 4px;
+}
+
+.iconSuccess {
+  background: var(--color-success);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 24px;
+}
+/*# sourceMappingURL=CampaignDetails.module.css.map */

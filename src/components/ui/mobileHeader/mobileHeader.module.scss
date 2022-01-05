@@ -1,0 +1,43 @@
+@import '../../../styles/variables.scss';
+
+.Container {
+  display: flex;
+  align-items: center;
+  padding: 0.8em 0.2em 0.8em 0.2em;
+  margin: 0;
+  width: 100%;
+  height: 8vh;
+  max-width: 100vw;
+  justify-content: space-between;
+  background-color: #ffff;
+  border-bottom: 1.5px solid #eeeeee;
+  // box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  .LeftContainer {
+    display: flex;
+    align-items: center;
+    .MenuIcon {
+      color: $colorGrayV4;
+      margin: 0 0.66em;
+    }
+    .BackIcon {
+      color: $colorGrayV4;
+      margin: 0 0.66em;
+      transform: scale(1.15);
+    }
+    .PageTitle {
+      font-size: 1.24em;
+      margin: 0;
+    font-weight: 600;
+      color: $colorGrayV4;
+      margin-bottom: -0.1em;
+    }
+  }
+  .Rightcontainer {
+  }
+}
+
+@media only screen and(max-height: 500px) {
+  .Container {
+    height: 12.5vh;
+  }
+}

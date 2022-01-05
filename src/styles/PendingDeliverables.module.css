@@ -1,0 +1,106 @@
+.deliverable {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 260px auto;
+      grid-template-columns: 260px auto;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+}
+
+.deliverable .assets {
+  width: 260px;
+  min-height: 320px;
+  background: var(--color-gray-v1);
+  border-radius: 8px;
+}
+
+.deliverable .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.deliverable .content .header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 8px 0px;
+}
+
+.deliverable .content .header .identity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.deliverable .content .header .body {
+  margin-left: 8px;
+}
+
+.deliverable .content .header .body .title {
+  font-weight: 600;
+}
+
+.deliverable .content .content {
+  padding: 16px 0px;
+}
+
+.deliverable .content .content .text {
+  width: 100%;
+  display: block;
+  font-size: var(--font-size-any-small);
+  word-break: break-word;
+}
+
+.stats {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+  row-gap: 8px;
+}
+
+.stats .stat .title {
+  font-weight: 600;
+}
+
+.stats .stat .subtitle {
+  color: var(--color-gray-v2);
+}
+/*# sourceMappingURL=PendingDeliverables.module.css.map */

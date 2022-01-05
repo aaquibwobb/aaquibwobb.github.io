@@ -1,0 +1,16 @@
+{
+  "resourceName": "wobb",
+  "policyUUID": "cfefa21c",
+  "bucketName": "wobbs3bucket",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

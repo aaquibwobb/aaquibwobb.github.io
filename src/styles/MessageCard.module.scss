@@ -1,0 +1,131 @@
+@import './variables.scss';
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0.7em 0.66em;
+  border-bottom: 1.5px solid #f1f1f1;
+  cursor: pointer;
+  background-color: #ffff;
+  .avatar {
+    width: 3.5em;
+    height: 3.5em;
+    position: relative;
+    > img {
+      border-radius: 50%;
+      width: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+    .selectedIcon {
+      color: #ffff;
+      background-color: $colorPrimary;
+      // font-size: 1.1em;
+      transform: scale(0.95);
+      font-weight: 600;
+      border-radius: 50%;
+      padding: 0em 0.1em;
+      position: absolute;
+      margin-left: -0.65em;
+    }
+    .onlineIcon {
+      color: #279b44;
+      background-color: #279b44;
+      // font-size: 1.1em;
+      transform: scale(0.5);
+      border: 2px solid #ffff;
+      font-weight: 600;
+      border-radius: 50%;
+      position: absolute;
+      margin-left: -0.85em;
+      top: 32.5px;
+    }
+  }
+
+  .RightContainer {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    margin-left: 0.66em;
+    margin-top: 0.14em;
+
+    .head {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      .title {
+        font-size: 16px;
+        font-weight: 500;
+        color: $colorGrayV3;
+      }
+
+      .time {
+        font-size: 13px;
+        font-weight: 400;
+        color: $colorGrayV2;
+      }
+      .timeBold {
+        font-size: 13px;
+        font-weight: 600;
+        color: $colorGrayV3;
+      }
+    }
+
+    .body {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      .message {
+        font-size: 13px;
+        text-align: left;
+        color: $colorGrayV2;
+        font-weight: 400;
+        margin-top: 0.06em;
+        letter-spacing: 0.01em;
+      }
+      .boldText {
+        font-weight: 500;
+        color: $colorGrayV3;
+      }
+
+      .badgeWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .badge {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $colorWhite;
+          background: $colorPrimary;
+          font-size: 11px;
+          font-weight: 500;
+          width: 1.82em;
+          height: 1.82em;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+}
+
+.selected {
+  background-color: $colorPrimarySurface;
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+  }
+}

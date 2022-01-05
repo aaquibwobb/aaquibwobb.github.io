@@ -1,0 +1,137 @@
+@import '../../../../styles/variables.scss';
+
+.chatControls {
+  display: none;
+  flex-direction: column;
+  height: 14.5%;
+  max-height: 16%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-bottom-right-radius: 1em;
+  z-index: 1;
+  .topContainer {
+    width: 100%;
+    > textarea {
+      margin: 0;
+      flex: 2;
+      height: auto;
+      display: flex;
+      align-items: center;
+      border: none;
+      border-top: 1px solid #d8d8d8;
+      padding: 0.7em 1.24em;
+      width: 100%;
+      outline: none;
+      font-weight: 400;
+      font-size: $fontSizeBodyText;
+    }
+  }
+  .bottomContainer {
+    display: flex;
+    background-color: #012fb708;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7em 1.2em;
+    border-bottom-right-radius: 1em;
+    box-shadow: #e4e4e429 0px 0px 20px;
+
+    .leftWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 0.2em;
+      .emojiIcon {
+        > button > span > svg {
+          transform: scale(1.18);
+          color: $colorGrayV2;
+        }
+      }
+      .attachFile {
+        margin-left: 0.6em;
+        align-content: flex-end;
+        > button > span > svg {
+          transform: scale(0.96);
+          color: $colorGrayV2;
+        }
+      }
+    }
+    .sendBtn {
+      background-color: $colorPrimary;
+      font-size: 13px;
+      color: #ffff;
+      border: none;
+      border-radius: 2em;
+      padding: 0.24em 1.1em;
+    }
+  }
+}
+
+.chatControlsMobile {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 8.5%;
+  align-items: center;
+  background-color: #fff;
+  .inputMessage {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    border: 1px solid #d8d8d8;
+    border-radius: 0.3em;
+    margin-right: -0.6em;
+    padding-left: 0.3em;
+    width: 78%;
+    .emojiIcon {
+      > button > span > svg {
+        transform: scale(1.1);
+        color: #a0a0a0;
+      }
+    }
+    > textarea {
+      width: 90%;
+      padding: 0.6em 0.2em;
+      border: none;
+      outline: none;
+      font-size: $fontSizeBodyText;
+    }
+    .attachFile {
+      // margin-left: 0.2em;
+      align-content: flex-end;
+      transform: rotate(-22deg);
+      > button > span > svg {
+        transform: scale(0.9);
+        color: #a8a8a8;
+      }
+    }
+  }
+  .sendBtn {
+    background-color: $colorPrimary;
+    font-size: 13px;
+    color: #ffff;
+    border: none;
+    border-radius: 2em;
+    padding: 0.3em 1.1em;
+  }
+}
+
+@media only screen and (max-height: 500px) {
+  .chatControlsMobile {
+    height: 13%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .chatControlsMobile {
+    display: none;
+  }
+  .chatControls {
+    display: flex;
+  }
+}

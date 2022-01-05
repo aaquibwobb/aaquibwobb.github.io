@@ -1,0 +1,137 @@
+@import '../../../../styles/variables.scss';
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  overflow-x: hidden;
+  .TopContainer {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    .UserProfile {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      height: 15%;
+      border-bottom: 1px solid $colorGrayV1;
+      padding: 1em 1em;
+      margin-left: 0.2em;
+      position: relative;
+      > img {
+        width: 3em;
+        border-radius: 50%;
+        height: 3em;
+        object-fit: cover;
+        object-position: center;
+      }
+      > div:nth-child(2) {
+        margin-left: 1.4em;
+        margin-bottom: -0.3em;
+        > p:nth-child(1) {
+          margin: 0;
+          font-size: $fontSizeHeading;
+          font-weight: 600;
+        }
+        > p:nth-child(2) {
+          margin: 0;
+          display: flex;
+          align-items: center;
+          color: $colorGrayV2;
+          font-size: $fontSizeHeading;
+          > span {
+            display: flex;
+            align-items: center;
+            color: #ffbc00;
+            font-weight: 600;
+            margin-left: 0.6em;
+            font-size: 14px;
+            > svg {
+              transform: scale(0.75);
+              margin-top: -0.065em;
+              margin-left: -0.12em;
+            }
+            > span {
+              color: $colorGrayV2;
+              font-weight: 400;
+              font-size: 0.9em;
+              margin-left: -0.2em;
+              margin-bottom: -0.26em;
+            }
+          }
+        }
+      }
+      .BackBtn {
+        position: absolute;
+        right: 0;
+        top: 5px;
+        color: $colorGrayV4;
+        > svg {
+        }
+      }
+    }
+    > ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      margin: 0;
+      width: 100%;
+      padding: 0;
+      padding-top: 0.2em;
+      > button {
+        width: 100%;
+        > span {
+          width: 100%;
+          padding: 0.42em 0.6em;
+          margin: 0;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          text-transform: none;
+          font-size: 1.16em;
+          font-weight: 400;
+          color: $colorGrayV4;
+          > img {
+            margin-right: 1.3em;
+            transform: scale(1.42);
+            color: #333333;
+          }
+          :hover {
+            background-color: $colorGrayV1;
+          }
+        }
+      }
+    }
+  }
+  .BottomContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 1.2em 1.4em;
+    width: 100%;
+    padding: 0;
+    > button > span {
+      width: 100%;
+      padding: 0.42em 0.6em;
+      color: $colorGrayV4;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      text-transform: none;
+      justify-content: flex-start;
+      font-size: 1.16em;
+      font-weight: 400;
+      > img {
+        margin-right: 1.4em;
+        transform: scale(1.24);
+        color: #333333;
+      }
+      :hover {
+        background-color: $colorGrayV1;
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@import '../../../../styles/variables.scss';
+
+.chatHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8%;
+  background-color: #fff;
+  padding: 0.4em 0.2em;
+  .leftContainer {
+    display: flex;
+    margin-left: 0.6em;
+    > a:nth-child(1) {
+      text-decoration: none;
+      margin: 0;
+      display: flex;
+      .BackIcon {
+        // width: 1.5em;
+        cursor: default;
+
+        transform: scale(1.12);
+      }
+    }
+    .Profile {
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      margin-left: 0.4em;
+      padding: 0.8em 0.8em;
+      cursor: pointer;
+      > img {
+        height: 2em;
+        width: 2em;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+      }
+      > p {
+        font-weight: 600;
+        font-size: 15px;
+        color: $colorGrayV4;
+        margin: 0;
+        margin-left: 0.45em;
+      }
+    }
+  }
+  .moreIcon {
+    > span > svg {
+      transform: scale(1.2);
+    }
+  }
+}
+
+@media only screen and (max-height: 500px) {
+  .chatHeader {
+    height: 12%;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .chatHeader {
+    height: 7.1%;
+    border-bottom: 1px solid $colorGrayV1;
+    border-top-right-radius: 1em;
+    // border-bottom-right-radius: 1em;
+    .leftContainer {
+      > a:nth-child(1) {
+        display: none;
+        background-color: #2e2e2e;
+      }
+    }
+  }
+}

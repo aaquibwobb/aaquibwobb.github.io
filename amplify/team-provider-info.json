@@ -1,0 +1,49 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-wobb-dev-31436-authRole",
+      "UnauthRoleArn": "arn:aws:iam::431104670392:role/amplify-wobb-dev-31436-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::431104670392:role/amplify-wobb-dev-31436-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-wobb-dev-31436-deployment",
+      "UnauthRoleName": "amplify-wobb-dev-31436-unauthRole",
+      "StackName": "amplify-wobb-dev-31436",
+      "StackId": "arn:aws:cloudformation:ap-south-1:431104670392:stack/amplify-wobb-dev-31436/64532dd0-5a02-11ec-bc82-0a7157ebae78",
+      "AmplifyAppId": "d3k4iak4uw2ee4",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-wobb-dev-31436-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "notifications": {
+        "Pinpoint": {
+          "Name": "wobb-dev",
+          "Id": "1befe9030e224962b40d43905e1222ff",
+          "Region": "ap-south-1"
+        }
+      },
+      "function": {
+        "wobbPostConfirmation": {
+          "deploymentBucketName": "amplify-wobb-dev-31436-deployment",
+          "s3Key": "amplify-builds/wobbPostConfirmation-43302f724c4c57615470-build.zip"
+        },
+        "wobbPreSignUp": {
+          "deploymentBucketName": "amplify-wobb-dev-31436-deployment",
+          "s3Key": "amplify-builds/wobbPreSignUp-2f7155543753376d4e47-build.zip"
+        },
+        "wobbOauthLinking": {
+          "deploymentBucketName": "amplify-wobb-dev-31436-deployment",
+          "s3Key": "amplify-builds/wobbOauthLinking-78327375677251436d67-build.zip"
+        },
+        "wobbCreateCampaignTrigger": {
+          "deploymentBucketName": "amplify-wobb-dev-31436-deployment",
+          "s3Key": "amplify-builds/wobbCreateCampaignTrigger-4e5a2f68552b44345a67-build.zip"
+        }
+      },
+      "auth": {
+        "wobb": {
+          "facebookAppId": "1362127507296782",
+          "googleClientId": "4b0d520c81064ccb6b23f3d8da1c9203"
+        }
+      }
+    }
+  }
+}

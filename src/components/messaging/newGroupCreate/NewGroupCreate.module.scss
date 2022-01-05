@@ -1,0 +1,244 @@
+@import '../../../styles/variables.scss';
+
+.container {
+  background: white;
+  min-height: 100%;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: none;
+  border-top-left-radius: 0.8em;
+  border-bottom-left-radius: 0.8em;
+  box-shadow: #dadada29 0px 0px 20px;
+  overflow: hidden;
+  position: relative;
+
+  .mobileHeaderContainer {
+    display: none;
+    width: 100%;
+    height: 8%;
+    .headerChildren {
+      display: flex;
+      > button > span > svg {
+        color: $colorGrayV4;
+      }
+    }
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0em 0.2em 0em 1.2em;
+    margin: 0;
+    border-bottom: 1.5px solid $colorGrayV1;
+    .title {
+      font-size: $fontSizeHeading;
+      font-weight: 600;
+    }
+
+    > button > span > svg {
+      color: $colorGrayV3;
+      transform: scale(0.9);
+    }
+  }
+
+  .searchbar {
+    background: $colorPrimarySurface;
+    padding: 6px 12px;
+    width: 100%;
+    > svg {
+      transform: scale(1.24);
+    }
+    > input {
+      font-size: $fontSizeBodyText;
+      margin-left: 0.6em;
+      font-weight: 400;
+    }
+  }
+  .list {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    > ul {
+      padding: 0;
+    }
+  }
+  .bottomContainer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 9%;
+    padding: 0.2em 1em;
+    background-color: #ffff;
+    border-bottom-left-radius: 1em;
+    border-top: 1px solid $colorGrayV1;
+    > p {
+      font-size: $fontSizeHeading;
+      font-weight: 500;
+    }
+    > button {
+      padding: 0.38em 0.4em;
+      background-color: $colorPrimary;
+      > span {
+        > svg {
+          color: #ffff;
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+  .groupIdentity {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 1em 1em 1em;
+    > button {
+      background-color: #012fb71a;
+      > span {
+        border-radius: 50%;
+        padding: 0.8em;
+        > svg {
+          color: $colorPrimary;
+        }
+      }
+    }
+    .groupName {
+      width: 100%;
+      margin-top: 1.8em;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      padding: 0.2em 1em 0.4em 0.6em;
+      border-bottom: 1.5px solid $colorGrayV1;
+
+      > input {
+        border: none;
+        outline: none;
+        // padding: 0.2 0.4em;
+        width: 84.5%;
+        font-size: $fontSizeHeading;
+        font-weight: 400;
+        color: $colorGrayV4;
+      }
+      > span {
+        width: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        > p {
+          margin: 0;
+          color: $colorGrayV2;
+          font-size: $fontSizeBodyText;
+        }
+        > button {
+          margin-left: 0.4em;
+          > span > svg {
+            color: #ffff;
+            background-color: #fbcb22;
+            border-radius: 50%;
+            border: none;
+            margin-top: -0.1em;
+          }
+        }
+      }
+    }
+  }
+  .groupSettings {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-top: 2.2em;
+    border-top: 1.5px solid $colorGrayV1;
+    border-bottom: 1.5px solid $colorGrayV1;
+    padding: 1em 1.6em 0.4em 1.6em;
+    > p {
+      margin: 0;
+      font-size: $fontSizeHeading;
+      font-weight: 500;
+      color: $colorGrayV4;
+      margin-bottom: 0.4em;
+    }
+    > div {
+      > label {
+        padding: 0.4em 0em;
+        > span:nth-child(2) {
+          // font-size: $fontSizeAnySmall;
+          font-size: 11px;
+          color: $colorGrayV2;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  > p {
+    font-size: $fontSizeHeading;
+    font-weight: 500;
+    color: $colorGrayV4;
+    margin: 0;
+    border-bottom: 1.5px solid $colorGrayV1;
+    padding: 0.7em 1.2em;
+  }
+  > button {
+    height: 3em;
+    > span {
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    .mobileHeaderContainer {
+      display: flex;
+    }
+    .header {
+      display: none;
+    }
+    .searchbar {
+      display: none;
+    }
+    .bottomContainer {
+      position: fixed;
+    }
+    .bottomContainer {
+      > button {
+        padding: 0.5em 0.52em;
+        background-color: $colorPrimary;
+        > span {
+          > svg {
+            color: #ffff;
+            font-size: 0.8em;
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+    .groupIdentity {
+      padding: 2em 1em 1em 1em;
+      .groupName {
+        margin-top: 2.6em;
+      }
+    }
+    .groupSettings {
+      margin-top: 4em;
+    }
+    > p {
+      padding: 1.2em 1.8em;
+      border: none;
+      width: 100%;
+      font-size: 16px;
+    }
+    > button {
+      position: fixed;        
+      bottom: 0;
+      width: 100%;
+      height: 3.8em;
+    }
+  }
+}

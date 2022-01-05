@@ -1,0 +1,78 @@
+@import './variables.scss';
+
+.page {
+  margin: 2.6em 100px 2em 100px;
+  margin-bottom: 0;
+  height: calc(100vh - 8vh - var(--header-height));
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.2em 0.2em 0.2em 1.2em;
+  margin: 0;
+  border-bottom: 1.5px solid $colorGrayV1;
+  .title {
+    font-size: $fontSizeHeading;
+    font-weight: 600;
+  }
+  .actions {
+    margin-right: -0.14em;
+    > button > span > svg {
+      color: $colorGrayV4;
+    }
+  }
+}
+
+.searchbar {
+  background: $colorPrimarySurface;
+  padding: 6px 12px;
+  width: 100%;
+  > svg {
+    transform: scale(1.24);
+  }
+  > input {
+    font-size: $fontSizeBodyText;
+    margin-left: 0.6em;
+    font-weight: 400;
+  }
+}
+
+.threadlist {
+  background: white;
+  min-height: 100%;
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  border-radius: none;
+  border-top-left-radius: 0.8em;
+  border-bottom-left-radius: 0.8em;
+  box-shadow: #dadada29 0px 0px 20px;
+  overflow: hidden;
+  .body {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    > ul {
+      padding: 0;
+    }
+  }
+}
+
+.threadcontent {
+  height: 100%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+  .page {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    height: 100%;
+  }
+}

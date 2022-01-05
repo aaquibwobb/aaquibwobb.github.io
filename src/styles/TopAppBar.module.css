@@ -1,0 +1,363 @@
+.toolbar {
+  width: 100%;
+  height: var(--header-height);
+  padding: 0px 15%;
+  background: var(--color-white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.logoWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.logoWrapper .title {
+  font-weight: bold;
+}
+
+.actions {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 100%;
+  margin: 0%;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.searchInput {
+  border-radius: 4px;
+  padding: 0.5vw;
+  padding-left: 2vw;
+  margin: 0px 0px;
+  width: 23vw;
+  background: var(--color-surface);
+  -webkit-filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.25));
+}
+
+.searchInput path {
+  fill: var(--color-gray-v2);
+}
+
+.searchInput input {
+  margin-left: 0.8vw;
+  color: var(--color-gray-v2);
+  font-size: var(--font-size-body-text);
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.navigationItem {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--color-gray-v3);
+  height: var(--header-height);
+  padding: 4px 16px;
+  border-bottom: 2px solid transparent;
+}
+
+.navigationItem .icon {
+  width: 100%;
+  height: 20px;
+  text-align: center;
+}
+
+.navigationItem .title {
+  text-align: center;
+  font-size: var(--font-size-body-text);
+  display: inline-block;
+  margin-top: 0.4vw;
+  white-space: nowrap;
+}
+
+.navigationItem:hover {
+  background: var(--color-surface);
+}
+
+.navigationItem.navigationItemActive {
+  border-bottom: 2px solid var(--color-gray-v2);
+}
+
+.me {
+  border: none;
+  height: 100%;
+  width: auto;
+  padding: 0px 16px;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.me .picture {
+  border-radius: 24px;
+  background: var(--color-surface);
+  height: 28px;
+  width: 28px;
+}
+
+.me .titleWrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.me .titleWrapper .title {
+  margin: 0px 8px;
+}
+
+.drawer_menu {
+  width: 320px;
+  height: 100%;
+  padding: 0px;
+  -webkit-box-shadow: 1px 1px 4px #00000060;
+          box-shadow: 1px 1px 4px #00000060;
+  background-color: var(--color-white);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.drawer_menu .searchInput {
+  margin: 8px;
+}
+
+.drawer_menu .navigation {
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.drawer_menu .navigation .navigationItem {
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border-bottom: none;
+  height: 46px;
+}
+
+.drawer_menu .navigation .navigationItem .icon {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  width: auto;
+}
+
+.drawer_menu .navigation .navigationItem .title {
+  margin-left: 8px;
+}
+
+.drawer_menu .navigation .navigationItem:hover {
+  background: var(--color-surface);
+}
+
+.drawer_menu .navigation .navigationItem.navigationItemActive {
+  background: var(--color-primary);
+}
+
+.drawer_menu .navigation .navigationItem.navigationItemActive .icon * {
+  fill: white;
+}
+
+.drawer_menu .navigation .navigationItem.navigationItemActive .title {
+  color: var(--color-white);
+}
+
+.drawer_menu .me {
+  display: none;
+}
+
+@media screen and (max-width: 1410px) {
+  .toolbar {
+    padding: 0% 10%;
+  }
+}
+
+@media screen and (max-width: 1230px) {
+  .toolbar {
+    padding: 0px 16px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .toolbar {
+    padding: 0px 4px;
+  }
+}
+
+@media screen and (max-width: 996px) {
+  .toolbar {
+    height: auto;
+    padding: 0px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .logoWrapper {
+    padding: 8px 8px;
+  }
+  .actions {
+    -webkit-box-flex: calc(2/3);
+        -ms-flex-positive: calc(2/3);
+            flex-grow: calc(2/3);
+    padding: 0px 8px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .searchInput {
+    -webkit-box-flex: calc(2/3);
+        -ms-flex-positive: calc(2/3);
+            flex-grow: calc(2/3);
+    margin: 0px 0px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .toolbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 8px 0px;
+  }
+  .actions {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    width: 100%;
+  }
+  .logoWrapper .title {
+    margin-left: 8px;
+  }
+}
+/*# sourceMappingURL=TopAppBar.module.css.map */

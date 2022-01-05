@@ -1,0 +1,39 @@
+.campaignTabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.campaignTab {
+  min-width: 120px;
+  text-align: center;
+  padding: 16px 24px;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--color-gray-v2);
+  font-size: var(--font-size-text-primary);
+  border-bottom: 2px solid var(--color-gray-v1);
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+  cursor: pointer;
+}
+
+.campaignTab:hover {
+  background: white;
+}
+
+.activeCampaignTab {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+/*# sourceMappingURL=CampaignTabs.module.css.map */

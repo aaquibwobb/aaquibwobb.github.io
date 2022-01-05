@@ -1,0 +1,330 @@
+enum CampaignStatus {
+  DRAFT
+  SUBMITTED
+  PUBLISHED
+  ONGOING
+  COMPLETED
+}
+
+enum PayoutType {
+  BARTER
+  VARIABLE
+  FIXED
+  CPA
+}
+
+enum Platform {
+  YOUTUBE
+  INSTAGRAM
+}
+
+enum Gender {
+  MALE
+  FEMALE
+  OTHERS
+}
+
+enum JobStatus {
+  SHORT_LISTED
+  HIRED
+  ONGOING
+  COMPLETED
+  REJECTED
+}
+
+type PayoutElement {
+  payoutType: PayoutType
+  maxMilestones: Int
+}
+
+enum PromotionGoals {
+  PRODUCT_REVIEW
+  PRODUCT_LAUNCH
+  BRAND_AWARENESS
+  APP_REVIEW
+  PRODUCT_UNBOXING
+}
+
+type FolloweRange {
+  label: String!
+  minFollowers: Int!
+  maxFollowers: Int!
+}
+
+type DeliveryMilestone {
+  milestoneTitle: String!
+  dueDate: AWSDateTime!
+  percentage: Int!
+}
+
+type Deliverables {
+  deliverableType: DeliverableType
+  count: Int
+}
+
+type Campaign
+  @model
+  @auth(
+    rules: [
+      {allow: owner, ownerField: "OwnerUserID"}
+      {allow: public, operations: [read]}
+      {allow: private, operations: [create, read]}
+    ]
+  ) {
+  id: ID! @primaryKey
+  Name: String!
+  Goals: [String]
+  Moto: String!
+  NoOfInfluencer: Int
+  Gender: Gender
+  Platform: Platform!
+  Brand: Brand @belongsTo
+  Categories: [Category]!
+  Location: String
+  minAge: Int
+  maxAge: Int
+  Language: String
+  FollowerRange: [FolloweRange]
+  Owner: User! @belongsTo
+  CampaignStatus: CampaignStatus
+  Deliverables: [Deliverables]
+  Requirements: [String]
+  MobileNo: String
+  Email: String
+  Payouts: [PayoutElement]
+  BarterPayouts: [DeliveryMilestone]
+  CashPayouts: [DeliveryMilestone]
+  CPAProductLink: String
+  CPACommissionRate: String
+  CPAProductPrice: Int
+  uid: String!
+  Submissions: [CampaignSubmission]
+  OngoingCampaigns: [Task] @hasMany
+}
+
+type CampaignSubmission {
+  influencerId: ID!
+  milestones: [DeliveryMilestone]
+  quizAnswer: [QuizElement]
+  status: JobStatus
+}
+
+type ChatRoom @model @auth(rules: [{allow: private}]) {
+  id: ID! @primaryKey
+  lastMessage: Message @hasOne
+  Messages: [Message] @hasMany
+  ChatRoomUsers: [ID]
+  ChatRoomUserMails: [String]
+  isGroup: Boolean
+  admins: [User] @manyToMany(relationName: "ChatRoomAdmins")
+}
+
+type Message @model @auth(rules: [{allow: private}]) {
+  id: ID!
+  content: String
+  chatroomID: ID
+  userID: ID
+}
+
+type QuizElement {
+  question: String
+  options: [String]
+}
+
+type PushNotificationDeviceToken {
+  service: PushNotificationService
+  deviceTokens: [String]
+}
+
+enum PushNotificationService {
+  APNS
+  FCM
+  BAIDU
+  ADM
+}
+
+type User
+  @model
+  @searchable
+  @auth(
+    rules: [
+      {allow: public, operations: [read]}
+      {allow: private, operations: [read, update, create]}
+    ]
+  ) {
+  id: ID! @primaryKey
+  name: String!
+  imageUrl: String
+  status: String
+  uid: String!
+  bio: String
+  website: String
+  gender: Gender
+  role: UserRole!
+  email: String
+  phone: String
+  languages: String
+  interests: String
+  categories: [Category]
+  pushNotificationTokens: [PushNotificationDeviceToken]
+  campaigns: [Campaign] @hasMany
+  chatrooms: [ID]
+  ownedChatrooms: [ChatRoom] @manyToMany(relationName: "ChatRoomAdmins")
+}
+
+enum TaskStatus {
+  TOBECOMPLETED
+  COMPLETED
+  ONGOING
+}
+
+type Task @model @auth(rules: [{allow: public}, {allow: private}]) {
+  id: ID! @primaryKey
+  user: User @hasOne
+  Title: String
+  deliverableType: DeliverableType!
+  Status: TaskStatus
+  Brief: String!
+  sharedID: String!
+  acceptedAt: AWSDateTime
+  completedAt: AWSDateTime
+  dueDate: AWSDate
+}
+
+type DeliverableType {
+  deliverableYoutube: DeliverableTypeYoutube
+  deliverableInsta: DeliverableTypeInsta
+}
+
+enum DeliverableTypeYoutube {
+  DEDICATED_VIDEO
+  INTEGRATED_VIDEO
+  SHORT
+}
+
+enum DeliverableTypeInsta {
+  REEL
+  SWIPE_UP_STORY
+  IGTV
+  STATIC_POST
+  VIDEO_POST
+  CONTENT_ONLY
+}
+
+enum UserRole {
+  INFLUENCER
+  TALENT_AGENCY
+  BRAND
+  MARKETING_AGENCY
+  FREELANCE_MARKETER
+}
+
+type Brand @model @auth(rules: [{allow: public}, {allow: private}]) {
+  id: ID!
+  name: String
+  website: String
+  uid: String
+  details: String
+  email: String
+  phoneNo: String
+  campaigns: [Campaign] @hasMany
+}
+
+enum Category {
+  LIFESTYLE_VLOGGING
+  PODCAST
+  PRANKS
+  BEAUTY
+  SKINCARE
+  HAIRCARE
+  MAKEUP_COSMETICS
+  FOOD
+  HEALTHY_FOOD
+  BUDGET_FOOD
+  RESTAURANT_CAFE
+  CHEF
+  COOKING
+  BAKING
+  FINANCE
+  CRYPTO
+  STOCKS
+  INVESTMENTS
+  FINANCIAL_EDUCATION
+  FINANCIAL_WELLNESS
+  TECH_GADGET
+  COMEDY
+  HUMOUR_FUNNY
+  STANDUP_COMEDIANS
+  SKETCH_COMEDY
+  SPORTS_GAMING
+  VIDEO_GAMING
+  BETTING
+  OUTDOOR
+  SPORTS
+  EDUCATION
+  GRADUATION_EXAMS
+  ENGINEERING
+  NON_ENGINEERING
+  POST_GRADUATE_EXAMS
+  CAT
+  GATE
+  GOVT_EXAMS
+  UPSC
+  BANKING
+  FASHION
+  MODELING
+  BUDGET_FASHION
+  LUXURY_GOODS
+  PLUS_SIZE
+  TRAVEL
+  DOMESTIC
+  INTERNATIONAL
+  BIKER
+  BUSINESS
+  CAREERS
+  MOTIVATION
+  HEALTH_WELLNESS
+  DOCTORS
+  DIETITIANS
+  YOGA
+  FITNESS
+  HEALTHY_LIFESTYLE
+  GYMMING
+  WEIGHT_LIFTING
+  WEIGHT_LOSS
+  ATHLETES
+  TOY
+  CHILDREN
+  BABY
+  WEDDING
+  PET
+  DOG
+  OTHERS
+  DECOR
+  HOME_DECOR
+  GARDEN_DECOR
+  INTERIOR
+  DESIGNERS
+  ARCHITECTS
+  REAL_ESTATE
+  RELATIONSHIPS
+  SCHOOL_STUDENTS
+  COLLEGE_STUDENTS
+  MOMMYS
+  FATHERS
+  DATING
+  MARRIED_COUPLE
+  AUTO
+  CARS_BIKES
+  COMMUNITIES
+  LGBT
+  ENTERTAINMENT
+  PHOTOGRAPHY
+  TELEVISION_FILM
+  SONGS
+  MUSIC
+  ART_SKETCHING
+  POETRY
+  NEWS
+  MEME
+}

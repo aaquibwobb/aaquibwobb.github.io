@@ -1,0 +1,91 @@
+.region {
+  padding: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border-bottom: 1px solid var(--color-gray-v1);
+  padding: 0px 8px;
+}
+
+.header .title {
+  margin-left: 8px;
+  text-align: left;
+  color: var(--color-gray-v2);
+  text-transform: uppercase;
+  font-size: var(--font-size-heading);
+}
+
+.content {
+  padding: 16px;
+  width: 100%;
+}
+
+.content p {
+  font-size: var(--font-size-body-text);
+  color: var(--color-gray-v2);
+}
+
+.region {
+  padding: 0;
+}
+
+.filterItem {
+  border-left: 1px solid transparent;
+  -webkit-transition: all 0.25ms linear;
+  transition: all 0.25ms linear;
+}
+
+.filterItem.active {
+  border-left: 8px solid var(--color-primary);
+}
+
+.itemText {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: var(--font-size-text-primary);
+  color: var(--color-gray-v2);
+  -webkit-transition: all 0.25ms linear;
+  transition: all 0.25ms linear;
+}
+
+.itemText.active {
+  color: var(--color-primary);
+}
+
+.count {
+  color: colorGrayV3;
+  font-weight: 600;
+  font-size: var(--font-size-text-primary);
+}
+
+.count.active {
+  color: var(--color-primary);
+}
+/*# sourceMappingURL=CampaignStatusList.module.css.map */

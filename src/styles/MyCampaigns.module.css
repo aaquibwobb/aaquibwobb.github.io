@@ -1,0 +1,8 @@
+.contentSurface {
+  background: var(--color-white);
+  border-radius: var(--surface-corner-radius);
+  min-height: 120px;
+  -webkit-box-shadow: 1px 1px 2px var(--color-gray-v1);
+          box-shadow: 1px 1px 2px var(--color-gray-v1);
+}
+/*# sourceMappingURL=MyCampaigns.module.css.map */

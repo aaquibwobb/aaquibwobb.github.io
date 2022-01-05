@@ -1,0 +1,113 @@
+.chatSection {
+  width: 100%;
+  background-color: var(--color-surface);
+  max-height: var(100vh-var(--header-height));
+  margin-left: 3vw;
+}
+
+.messagetitle {
+  margin: 1vw;
+  padding-top: 1vw;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.messagetitle .composeButton {
+  text-align: end;
+}
+
+.table {
+  min-width: 650;
+}
+
+.chatSection {
+  width: 100%;
+  height: 80vh;
+}
+
+.messageArea {
+  height: 65vh;
+  overflow-y: auto;
+}
+
+.searchbar {
+  background: var(--color-primary-surface);
+  width: 100%;
+  padding: 0.5vw;
+}
+
+.section {
+  padding: 0 40px;
+  background-color: var(--color-white);
+}
+
+.listItem .name {
+  padding-left: 2vw;
+}
+
+@media only screen and (min-width: 768px) {
+  .listItem .name {
+    padding-left: 1vw;
+  }
+}
+
+.MuiTableCell-root {
+  padding: 1rem !important;
+}
+
+.badgeWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-left: 1vw;
+}
+
+.badge {
+  color: var(--color-white);
+  background: var(--color-primary);
+  font-size: var(--font-size-any-small);
+  font-weight: 500;
+  width: 18px;
+  height: 18px;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .listOfPeople {
+    height: 70vh;
+    overflow: scroll;
+    padding-bottom: 4vw;
+  }
+}
+
+.icon:hover {
+  color: var(--color-primary);
+}
+
+.widgets {
+  margin-top: 1vw;
+}
+/*# sourceMappingURL=ChatBox.css.map */

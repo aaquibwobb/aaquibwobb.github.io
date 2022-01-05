@@ -1,0 +1,53 @@
+@import '../../../../../styles/variables.scss';
+
+.Container {
+  background-color: #e6ebf8;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  padding: 0.85em;
+  border-radius: 1.2em 1.2em 0em 1.2em;
+  width: 70%;
+  box-shadow: #85858529 0px 1px 4px;
+  margin: 0.5em 0;
+  .TextImage {
+    width: 100%;
+    height: 14em;
+    border-radius: 0.6em;
+    object-fit: cover;
+    object-position: center;
+  }
+  .Text {
+    margin: 0;
+    padding-top: 0.6em;
+    padding-bottom: 0.4em;
+    font-size: 14px;
+    line-height: 1.2em;
+    font-weight: 400;
+  }
+  .Time {
+    margin: 0;
+    align-self: flex-end;
+    font-size: 12px;
+    color: $colorGrayV3;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .Container {
+    width: 42%;
+    padding: 0.7em;
+    .TextImage {
+      height: 10em;
+    }
+    .Text {
+      font-size: 13px;
+      padding-bottom: 0.2em;
+      padding-top: 0.4em;
+    }
+    .Time {
+      color: $colorGrayV2;
+      font-size: 400;
+    }
+  }
+}

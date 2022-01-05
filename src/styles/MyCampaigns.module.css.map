@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,eAAe,CAAC;EACZ,UAAU,ECSD,kBAAkB;EDR3B,aAAa,ECyBK,4BAA4B;EDxB9C,UAAU,EAAE,KAAK;EACjB,UAAU,EAAE,GAAG,CAAC,GAAG,CAAC,GAAG,CCCb,oBAAoB;CDAjC",
+    "sources": [
+        "MyCampaigns.module.scss",
+        "variables.scss"
+    ],
+    "names": [],
+    "file": "MyCampaigns.module.css"
+}

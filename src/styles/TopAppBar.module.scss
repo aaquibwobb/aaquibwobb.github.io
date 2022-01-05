@@ -1,0 +1,256 @@
+@import './variables.scss';
+
+.toolbar {
+  width: 100%;
+  height: 9vh;
+  padding: 0px 15%;
+  background: $colorWhite;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  .title {
+    font-weight: bold;
+  }
+}
+
+.actions {
+  flex-grow: 1;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.searchInput {
+  flex-grow: calc(2 / 4);
+  border-radius: 4px;
+  padding: 6px 8px;
+  margin: 0em 4em 0em 0em;
+  background: $colorSurface;
+  display: flex;
+  box-shadow: #00000029 0px 0px 2.5px;
+  > svg {
+    width: 2em;
+    > path {
+      fill: $colorGrayV2;
+    }
+  }
+
+  input {
+    margin-left: 4px;
+    font-size: $fontSizeBodyText;
+    font-weight: 400;
+    color: $colorGrayV4;
+  }
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.navigationItem {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $colorGrayV2;
+  padding: 05px 16px;
+  font-weight: 400;
+  border-bottom: 4px solid transparent;
+  .icon {
+    text-align: center;
+    > svg {
+      transition: all 0.1s;
+      > path {
+        fill: $colorGrayV2;
+      }
+    }
+  }
+
+  .title {
+    font-weight: 400;
+    text-align: center;
+    font-size: 13.5px;
+    display: inline-block;
+    white-space: nowrap;
+    margin: 0;
+  }
+
+  &:hover {
+    color: $colorGrayV4;
+    .icon {
+      > svg {
+        > path {
+          fill: $colorGrayV4;
+        }
+      }
+    }
+  }
+  &:active {
+    .icon {
+      > svg {
+        transform: scale(1.08);
+      }
+    }
+  }
+
+  &.navigationItemActive {
+    border-bottom: 0.22em solid $colorGrayV4;
+    border-radius: 0.2em;
+    color: $colorGrayV4;
+    .icon {
+      > svg {
+        > path {
+          fill: $colorGrayV4;
+        }
+      }
+    }
+  }
+}
+
+.me {
+  border: none;
+  height: 100%;
+  width: auto;
+  padding: 0px 16px;
+  background: transparent;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  > img {
+    border-radius: 24px;
+    background: $colorSurface;
+    height: 2.3em;
+    width: 2.4em;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: -0.3em;
+    transition: all 0.1s;
+  }
+
+  .titleWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: 400;
+    font-size: 14px;
+    color: $colorGrayV2;
+    margin-right: -0.4em;
+    .title {
+      margin: 0;
+    }
+    > svg {
+      margin: 0;
+      margin-left: -0.32em;
+      margin-top: -0.2em;
+      padding: 0;
+      transform: scale(1.55);
+    }
+  }
+  &:hover {
+    .titleWrapper {
+      color: $colorGrayV4;
+    }
+  }
+  &:active {
+    > img {
+      transform: scale(1.06);
+    }
+  }
+}
+
+@media screen and (max-width: 1410px) {
+  .toolbar {
+    padding: 0% 10%;
+  }
+}
+
+@media screen and (max-width: 1230px) {
+  .toolbar {
+    padding: 0px 16px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .toolbar {
+    padding: 0px 4px;
+  }
+}
+
+@media screen and (max-width: 996px) {
+  .toolbar {
+    height: auto;
+    padding: 0px;
+
+    justify-content: space-around;
+  }
+
+  .logoWrapper {
+    padding: 8px 8px;
+  }
+
+  .actions {
+    flex-grow: calc(2 / 3);
+    padding: 0px 8px;
+    justify-content: center;
+  }
+
+  .searchInput {
+    flex-grow: calc(2 / 3);
+    margin: 0px 0px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 8px 0px;
+  }
+
+  .actions {
+    flex-grow: 0;
+    width: 100%;
+  }
+
+  .logoWrapper {
+    .title {
+      margin-left: 8px;
+    }
+  }
+}
