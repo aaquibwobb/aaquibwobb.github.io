@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5e3b886b.chunk.css",
+    "main.js": "/static/js/main.3c3f3659.chunk.js",
+    "main.js.map": "/static/js/main.3c3f3659.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.1a9ff3fb.js",
+    "runtime-main.js.map": "/static/js/runtime-main.1a9ff3fb.js.map",
+    "static/css/2.6ce66164.chunk.css": "/static/css/2.6ce66164.chunk.css",
+    "static/js/2.24162e6f.chunk.js": "/static/js/2.24162e6f.chunk.js",
+    "static/js/2.24162e6f.chunk.js.map": "/static/js/2.24162e6f.chunk.js.map",
+    "static/js/3.91940fb1.chunk.js": "/static/js/3.91940fb1.chunk.js",
+    "static/js/3.91940fb1.chunk.js.map": "/static/js/3.91940fb1.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.6ce66164.chunk.css.map": "/static/css/2.6ce66164.chunk.css.map",
+    "static/css/main.5e3b886b.chunk.css.map": "/static/css/main.5e3b886b.chunk.css.map",
+    "static/js/2.24162e6f.chunk.js.LICENSE.txt": "/static/js/2.24162e6f.chunk.js.LICENSE.txt",
+    "static/media/home.scss": "/static/media/campaign-img.d13c76d4.svg",
+    "static/media/campaign.4d51a40c.svg": "/static/media/campaign.4d51a40c.svg",
+    "static/media/email.991f8ac3.svg": "/static/media/email.991f8ac3.svg",
+    "static/media/favourite.deea4dcf.svg": "/static/media/favourite.deea4dcf.svg",
+    "static/media/filtering.15d6bde4.svg": "/static/media/filtering.15d6bde4.svg",
+    "static/media/help-icon.eba3abbf.svg": "/static/media/help-icon.eba3abbf.svg",
+    "static/media/instagram.f0c7b64a.svg": "/static/media/instagram.f0c7b64a.svg",
+    "static/media/left-arrow.1f273c35.svg": "/static/media/left-arrow.1f273c35.svg",
+    "static/media/linkedin.1adf376f.svg": "/static/media/linkedin.1adf376f.svg",
+    "static/media/lock-icon.02553412.svg": "/static/media/lock-icon.02553412.svg",
+    "static/media/logo.f45914b2.svg": "/static/media/logo.f45914b2.svg",
+    "static/media/logout-icon.8bb3f5f7.svg": "/static/media/logout-icon.8bb3f5f7.svg",
+    "static/media/message.0cba4d5c.svg": "/static/media/message.0cba4d5c.svg",
+    "static/media/my-order-icon.e34ee398.svg": "/static/media/my-order-icon.e34ee398.svg",
+    "static/media/skills.531521ca.png": "/static/media/skills.531521ca.png",
+    "static/media/slick-theme.css": "/static/media/slick.c94f7671.ttf",
+    "static/media/user-icon.c82da7ba.svg": "/static/media/user-icon.c82da7ba.svg",
+    "static/media/whatsapp.b7e56a51.svg": "/static/media/whatsapp.b7e56a51.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1a9ff3fb.js",
+    "static/css/2.6ce66164.chunk.css",
+    "static/js/2.24162e6f.chunk.js",
+    "static/css/main.5e3b886b.chunk.css",
+    "static/js/main.3c3f3659.chunk.js"
+  ]
+}
