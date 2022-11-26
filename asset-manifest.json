@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.c91fcfc4.chunk.css",
-    "main.js": "/static/js/main.de4a7591.chunk.js",
-    "runtime-main.js": "/static/js/runtime-main.c19120dc.js",
+    "main.css": "/static/css/main.1bedeb97.chunk.css",
+    "main.js": "/static/js/main.04586e89.chunk.js",
+    "runtime-main.js": "/static/js/runtime-main.4d6fd251.js",
     "static/css/2.b68550c2.chunk.css": "/static/css/2.b68550c2.chunk.css",
-    "static/js/2.e9943a9a.chunk.js": "/static/js/2.e9943a9a.chunk.js",
-    "static/js/3.32ec3659.chunk.js": "/static/js/3.32ec3659.chunk.js",
+    "static/js/2.bf1ba5d0.chunk.js": "/static/js/2.bf1ba5d0.chunk.js",
+    "static/js/3.4380947b.chunk.js": "/static/js/3.4380947b.chunk.js",
     "index.html": "/index.html",
-    "static/js/2.e9943a9a.chunk.js.LICENSE.txt": "/static/js/2.e9943a9a.chunk.js.LICENSE.txt",
+    "static/js/2.bf1ba5d0.chunk.js.LICENSE.txt": "/static/js/2.bf1ba5d0.chunk.js.LICENSE.txt",
     "static/media/CASIO.a60f88b4.svg": "/static/media/CASIO.a60f88b4.svg",
     "static/media/Campaign Icon.5fb2bde0.svg": "/static/media/Campaign Icon.5fb2bde0.svg",
     "static/media/GetInfluencercampaigns.f375a7ea.svg": "/static/media/GetInfluencercampaigns.f375a7ea.svg",
@@ -53,10 +53,10 @@
     "static/media/yamaha.003069e4.svg": "/static/media/yamaha.003069e4.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c19120dc.js",
+    "static/js/runtime-main.4d6fd251.js",
     "static/css/2.b68550c2.chunk.css",
-    "static/js/2.e9943a9a.chunk.js",
-    "static/css/main.c91fcfc4.chunk.css",
-    "static/js/main.de4a7591.chunk.js"
+    "static/js/2.bf1ba5d0.chunk.js",
+    "static/css/main.1bedeb97.chunk.css",
+    "static/js/main.04586e89.chunk.js"
   ]
 }
