@@ -1,0 +1,30 @@
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="15" height="15" fill="#E5E5E5"/>
+<mask id="path-1-inside-1_24_2260" fill="white">
+<rect x="-5398" y="-1874" width="8212" height="3841" rx="24"/>
+</mask>
+<rect x="-5398" y="-1874" width="8212" height="3841" rx="24" stroke="black" stroke-width="60" mask="url(#path-1-inside-1_24_2260)"/>
+<g clip-path="url(#clip0_24_2260)">
+<g filter="url(#filter0_d_24_2260)">
+<rect x="-17" y="-145" width="251" height="811.001" fill="white"/>
+</g>
+<rect width="251" height="47.941" transform="translate(-17 -15)" fill="white"/>
+<path d="M9.29803 13.5212L9.29771 13.5213C8.71628 13.6913 8.11145 13.7778 7.49981 13.7778C4.01362 13.7778 1.19336 10.9807 1.19336 7.56492C1.19336 4.14921 4.01363 1.35205 7.49981 1.35205C10.986 1.35205 13.8063 4.14921 13.8063 7.56492C13.8063 9.39795 12.9909 11.1294 11.5627 12.3162L11.5627 12.3162C11.2243 12.5974 11.1216 13.0765 11.3226 13.4732L11.5435 13.909L9.77735 13.5068L9.77475 13.5062C9.70712 13.4911 9.63696 13.483 9.5655 13.483C9.47614 13.483 9.38605 13.4955 9.29803 13.5212Z" fill="#484848" stroke="#484848" stroke-width="1.5"/>
+<ellipse cx="4.6875" cy="7.5001" rx="0.9375" ry="0.9" fill="white"/>
+<ellipse cx="7.1875" cy="7.5001" rx="0.937501" ry="0.9" fill="white"/>
+<ellipse cx="9.6875" cy="7.5001" rx="0.9375" ry="0.9" fill="white"/>
+</g>
+<defs>
+<filter id="filter0_d_24_2260" x="-17.33" y="-145" width="251.33" height="811.001" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="-0.33"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.235294 0 0 0 0 0.235294 0 0 0 0 0.262745 0 0 0 0.29 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_24_2260"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_24_2260" result="shape"/>
+</filter>
+<clipPath id="clip0_24_2260">
+<rect width="375" height="812" fill="white" transform="translate(-17 -145)"/>
+</clipPath>
+</defs>
+</svg>
